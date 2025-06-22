@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liar's Bar</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(145deg, #0a0a0a, #330000);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    
+
+    .image-container {
+      position: relative;
+      width: 220px;
+      margin-bottom: 25px;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .image-container img {
+      width: 100%;
+      border-radius: 25px;
+      box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      line-height: 1.2;
+      margin-bottom: 15px;
+      font-weight: 900;
+    }
+
+    p {
+      max-width: 480px;
+      margin: 0 auto 30px;
+      line-height: 1.7;
+      font-size: 1rem;
+      color: #e0e0e0;
+    }
+
+    .download-btn {
+      background: linear-gradient(to right, #ff0000, #cc0000);
+      color: white;
+      padding: 15px 35px;
+      border: none;
+      border-radius: 40px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .download-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 50, 50, 0.7);
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="image-container">
+    <img src="data:image/jpeg;base64,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" alt="Liar's Bar Character" />
+  </div>
+  <h1>liar's<br>bar</h1>
+  <p>
+    Dive into this multiplayer online experience set in a sketchy bar where
+    the games are as dangerous as the patrons. Join a table of 4 and test
+    your skills in Liar's Dice and Liar's Deck, where lying and bluffing
+    are key to victory.
+  </p>
+  <button class="download-btn">DOWNLOAD GAME!</button>
+</body>
+</html>
